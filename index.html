@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CSS Flexboard</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;600;700&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper {
+    background-color: #eee;
+    width: 90%;
+    height: 80vh;
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper .box1,
+  .box2,
+  .box3 {
+    height: 80%;
+    padding: 20px;
+
+  }
+
+  .wrapper .box1 {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+
+  }
+
+  .wrapper .box2 {
+    background: hsl(184, 100%, 22%);
+
+
+  }
+
+  .wrapper .box3 {
+    background: hsl(179, 100%, 13%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  #contents {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: hsla(0, 0%, 100%, 0.75);
+  }
+
+  #contents h1 {
+    font-size: 28px;
+    font-family: 'Big Shoulders Display', cursive;
+  }
+
+  #contents p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+
+  }
+
+  #contents a {
+    background-color: hsl(0, 0%, 95%);
+    text-decoration: none;
+    padding: 10px;
+    width: 80%;
+    color: hsl(31, 77%, 52%);
+    border-radius: 30px;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+  }
+
+  .box2 #contents a {
+    color: hsl(184, 100%, 22%);
+  }
+
+  .box3 #contents a {
+    color: hsl(179, 100%, 13%);
+  }
+</style>
+
+<body>
+  <section>
+    <div class="wrapper">
+      <div class="box1">
+        <div id="contents">
+          <img src="icon-sedans.svg" alt="" width="35px">
+          <h1>SEDANS</h1>
+          <p>Choose a sedans for its affordability and excellent fuel economy. Ideal for cruising in the city or
+            on your next road trip.</p>
+          <a href="#">Learn more</a>
+        </div>
+
+      </div>
+      <div class="box2">
+
+        <div id="contents">
+          <img src="icon-suvs.svg" alt="" width="35px">
+
+          <h1>SUVS</h1>
+          <p>Take an SUV for its spacious interior, power and versatility. Perfect for your next family vacation and
+            off-road adventures.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+      <div class="box3">
+
+        <div id="contents">
+          <img src="icon-luxury.svg" alt="" width="40px">
+          <h1>LUXURY</h1>
+          <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and
+            arrive in style.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+
+</html>
