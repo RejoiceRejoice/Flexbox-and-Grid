@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CSS grid design</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.container {
+    margin-top: 40px;
+    background-color: rgb(65, 133, 172);
+    width: 70%;
+    height: 90vh;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 20% 20% 20%;
+    grid-template-areas:
+        "a a b"
+        "c d d"
+        "c e e"
+    ;
+    gap: 15px;
+}
+
+.container .divbox1 {
+    background-color: rgb(233, 42, 42);
+    grid-area: a;
+ }
+
+.container .divbox2 {
+    background-color: orange;
+    grid-area: b;
+   }
+
+.container .divbox3 {
+    background-color: rgb(27, 110, 27);
+    grid-area: c;
+}
+
+.container .divbox4 {
+    background-color: lightgrey;
+    grid-area: d;
+}
+
+.container .divbox5 {
+    background-color: purple;
+    grid-area: e;
+}
+
+@media (max-width: 1007px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d"
+            "e"
+        ;
+       }
+
+    .container .divbox4 {
+        height: 50%;
+    }
+
+    .container .divbox5 {
+        height: 100%;
+        position: relative;
+        top: -90px;
+    }
+  }
+</style>
+<body>
+     <main>
+        <div class="container">
+            <div class="divbox1"></div>
+            <div class="divbox2"></div>
+            <div class="divbox3"></div>
+            <div class="divbox4"></div>
+            <div class="divbox5"></div>
+        </div>
+
+    </main>
+ 
+  </body>
+
+</html>
